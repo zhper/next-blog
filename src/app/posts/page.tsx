@@ -1,53 +1,11 @@
 import React from 'react'
 import AllPostsCOM from '@/components/post/AllPosts'
-const DUMMY_POSTS = [
-    {
-        title: 'title',
-        image: 'getting-started-nextjs.png',
-        date: new Date(),
-        slug: 'getting-start-with-nextjs',
-        excerpt: 'zzzz'
-    },
-    {
-        title: 'title',
-        image: 'getting-started-nextjs.png',
-        date: new Date(),
-        slug: 'getting-start-with-nextjs',
-        excerpt: 'zzzz'
-    },
-    {
-        title: 'title',
-        image: 'getting-started-nextjs.png',
-        date: new Date(),
-        slug: 'getting-start-with-nextjs',
-        excerpt: 'zzzz'
-    },
-    {
-        title: 'title',
-        image: 'getting-started-nextjs.png',
-        date: new Date(),
-        slug: 'getting-start-with-nextjs',
-        excerpt: 'zzzz'
-    },
-    {
-        title: 'title',
-        image: 'getting-started-nextjs.png',
-        date: new Date(),
-        slug: 'getting-start-with-nextjs',
-        excerpt: 'zzzz'
-    },
-    {
-        title: 'title',
-        image: 'getting-started-nextjs.png',
-        date: new Date(),
-        slug: 'getting-start-with-nextjs',
-        excerpt: 'zzzz'
-    },
-]
+import { getAllPosts } from '@/utils/getAllPost'
 
 export default function AllPosts() {
+    const allPosts = getAllPosts()
     return (
-        <AllPostsCOM posts={DUMMY_POSTS} />
+        <AllPostsCOM posts={allPosts} />
     )
 }
 
